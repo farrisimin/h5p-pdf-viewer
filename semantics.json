@@ -1,12 +1,46 @@
 [
   {
-    "label": "Text",
+    "label": "PDF File",
     "importance": "high",
-    "name": "textField",
-    "type": "text",
-    "widget": "textarea",
-    "placeholder": "Hello world",
-    "default": "Hello %username",
-    "description": "Says hello to someone"
+    "name": "pdfFile",
+    "type": "file",
+    "mimeTypes": [
+      "application/pdf"
+    ],
+    "description": "Upload the PDF file to be displayed in the viewer.",
+    "required": true
+  },
+  {
+    "label": "Starting Page",
+    "importance": "low",
+    "name": "startingPage",
+    "type": "number",
+    "default": 1,
+    "min": 1,
+    "description": "Set the initial page number to display when the PDF is loaded."
+  },
+  {
+    "label": "Show Navigation Controls",
+    "importance": "medium",
+    "name": "showNavigation",
+    "type": "boolean",
+    "default": true,
+    "description": "Enable or disable the navigation controls (previous/next buttons) for paging through the PDF."
+  },
+  {
+    "label": "Render Annotation Layer",
+    "importance": "low",
+    "name": "renderAnnotationLayer",
+    "type": "boolean",
+    "default": false,
+    "description": "Choose whether to render the annotation layer, such as text highlights, forms, etc."
+  },
+  {
+    "label": "Render Text Layer",
+    "importance": "low",
+    "name": "renderTextLayer",
+    "type": "boolean",
+    "default": false,
+    "description": "Choose whether to render the text layer on top of the PDF, useful for text selection."
   }
 ]
